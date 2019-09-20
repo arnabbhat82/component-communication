@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ComponentFactoryResolver,
+} from '@angular/core';
+import { ShowCountryDirective } from '../show-country.directive';
 
 @Component({
   selector: 'app-parent',
@@ -6,8 +12,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss'],
 })
 export class ParentComponent implements OnInit {
-  constructor() {}
   message: string;
+  @ViewChild(ShowCountryDirective, { static: false })
+  showCountry: ShowCountryDirective;
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
   ngOnInit() {}
   recieveMessage($event) {
     this.message = $event;
