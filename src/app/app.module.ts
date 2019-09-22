@@ -22,6 +22,12 @@ import { BangladeshComponent } from './bangladesh/bangladesh.component';
     AfghanistanComponent,
     BangladeshComponent,
   ],
+  entryComponents: [
+    IndiaComponent,
+    PakistanComponent,
+    AfghanistanComponent,
+    BangladeshComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
